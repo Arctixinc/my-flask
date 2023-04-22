@@ -4,6 +4,7 @@ from flask import Flask, request, Response
 from uvicorn import run
 
 app = Flask(__name__)
+app.debug = True
 
 @app.route('/api/data', methods=['GET'])
 def get_data():
