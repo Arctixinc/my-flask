@@ -35,10 +35,4 @@ def get_data():
     return response
 
 if __name__ == '__main__':
-    import argparse
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--port', type=int, required=True, help='port number to listen on')
-    args = parser.parse_args()
-
-    run(app, host='0.0.0.0', port=args.port)
+    app.run(debug=True, host='0.0.0.0', port=10000)
